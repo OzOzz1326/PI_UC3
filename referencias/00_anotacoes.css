@@ -1,0 +1,14 @@
+.anotacoes{
+    color: aliceblue; /* MUDA A COR DA LETRA */
+    font-size: 25px; /* MUDA O TAMANHO DA LETRA */
+    background: burlywood; /* MUDA A COR DO FUNFO */
+    text-align: center; /* CENTRALIZA O TEXTO NA TELA */
+    width: 300px; /* MUDA A LARGURA/TAMANHO DAS COISAS */
+    margin: 50px; /* CRIA UM EPAÇAMENTO EXTERNO */
+    padding: 50px; /* CRIA UM ESPAÇAMENTO INTERNO */
+    border-radius: 10px; /* CRIA CANTOS ARREDONDADOS */
+    box-shadow: 1px 2px 10px #ddd ; /* CRIA A SOMBRA */
+    font-weight: bold; /* MUDA ESPESSURA OU O PESO */ 
+    cursor: pointer; /* MUDA O CURSOR DO MOUSE PARA INDICADOR */
+    border: none; /* ALTERA A BORDA */
+}

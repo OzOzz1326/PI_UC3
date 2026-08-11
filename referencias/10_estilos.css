@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    font-family: "Roboto";
+    color:#444444;
+    background-color: #F5F5F5
+}
+
+.cabecalho{
+    background-color: #FFFFFF;
+    margin: 50px;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 10px #ddd ;
+}
+
+.cabecalho h1{
+    color: #1E85F7;
+    margin: 0;
+}
+.cabecalho p{
+    margin: 0;
+    margin-bottom: 20px;
+    margin-top: -5px;
+}
+
+.botao{
+    padding: 7px 50px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.botao-principal{
+    background-color: #1E85F7;
+    color: #FFFFFF;
+    /* border: 1px solid red ; */
+    border: none;
+}
+
+.botao-invertido{
+    background-color: transparent;
+    border: 2px solid #1E85F7;
+    color: #1E85F7;
+}

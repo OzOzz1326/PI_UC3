@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    font-family: "Roboto"
+}
+
+.menu{
+    text-align: center;
+}
+
+.cabecalho{   
+    background-color:#C8E6C9;
+    text-align: center;
+} 
+
+.titulo{
+    color:#388E3C;
+    text-align: center;
+    font-size: 35px;
+}
+
+.subtitulo{
+    color:#4CAF50;
+    text-align: center;
+    font-size: 25px;
+}
+
+.secao{
+    color:#388E3C;
+    text-align: center;
+    font-size: 30px;
+}
+
+.card{
+
+    background-color:#C8E6C9;
+    width: 300px;
+    text-align: center;
+}
+
+.card-titulo{
+    text-align: center;
+    font-size: 25px;
+    color:#388E3C;
+}
+
+.card-descricao{
+    font-size: 13px;
+    text-align: left;
+}
+
+.card-preco{
+    color: #388E3C;
+    text-align: left;
+}
+
+.card-botao{
+    background-color: #388E3C;
+    color: #C8E6C9;
+}

@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{ /* tudo que aplica no body aplica no site todo */
+    background-color: yellowgreen;
+    text-align: center;
+    font-family:"Roboto", sans-serif;
+}
+
+h1{
+    color: blue;
+    text-align: center;
+}
+
+p{
+    text-align: center;
+    color:azure;
+    background-color:green ;
+}

@@ -5,7 +5,7 @@ body {
     padding: 0;
     font-family: 'Roboto', sans-serif;
     /* Imagem de estádio como fundo, igual a do login */
-    background-image: url('https://images.unsplash.com/photo-1518605368461-1e125222058c?q=80&w=2070&auto=format&fit=crop');
+    background-image: url('./fundo2.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -25,12 +25,8 @@ body {
 }
 
 .logo-img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: white;
-    padding: 5px;
-    border: 2px solid white;
+    width: 125px;
+    height: 80px;
 }
 
 .menu {

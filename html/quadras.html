@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/quadras.css"/>
+    <title>Quadras - SportInCity</title>
+</head>
+<body>
+
+    <!-- 1. Navbar Fixa (Topo da Página) -->
+    <nav class="navbar">
+        <a href="#" class="navbar-brand">
+            <div class="navbar-logo">
+                <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <path d="M12 2a10 10 0 0 0-7.07 2.93l3.54 3.54A5 5 0 0 1 12 7v-5z" fill="currentColor"/>
+                    <polygon points="12,7 14.5,10.5 13,14 11,14 9.5,10.5" fill="currentColor"/>
+                </svg>
+            </div>
+            <span class="navbar-titulo">SportInCity</span>
+        </a>
+
+        <ul class="navbar-menu">
+            <li class="navbar-item"><a href="#">Início</a></li>
+            <li class="navbar-item active"><a href="#">Quadras</a></li>
+            <li class="navbar-item"><a href="#">Filiais</a></li>
+            <li class="navbar-item"><a href="#">Torneios</a></li>
+        </ul>
+
+        <div class="navbar-acoes">
+            <div class="search-bar">
+                <input type="text" placeholder="Pesquise..." aria-label="Pesquisar quadras">
+                <button type="button" aria-label="Buscar">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <button class="btn-login" id="btn-user-profile">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                </svg>
+                <span>Entrar</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 2. Container Principal (Sidebar de Filtros + Deck de Quadras + Feedbacks) -->
+    <main class="container-principal">
+
+        <!-- Sidebar Esquerda: Menu de Filtragem por Horário e Data (Slides 3 e 4) -->
+        <aside class="sidebar-filtros">
+            <div class="filtros-header">
+                <span class="filtros-titulo">Filtrar</span>
+                <div class="filtros-tabs">
+                    <!-- Ícone de Reloginho (Horário - Slide 3) -->
+                    <button class="tab-btn active" id="tab-horario-btn" title="Filtrar por Horário">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </button>
+                    <!-- Ícone de Calendário (Data - Slide 4) -->
+                    <button class="tab-btn" id="tab-data-btn" title="Filtrar por Data">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Conteúdo do Filtro: Aba Horário (Slide 3) -->
+            <div class="tab-conteudo active" id="tab-horario">
+                <div class="grupo-filtro">
+                    <div class="grupo-titulo">
+                        <span>Manhã</span>
+                        <small>∨</small>
+                    </div>
+                    <div class="checkbox-lista">
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="horario" value="08:00 - 09:00">
+                            08:00 - 09:00
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="horario" value="09:00 - 10:00">
+                            09:00 - 10:00
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="horario" value="10:00 - 11:00">
+                            10:00 - 11:00
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="horario" value="11:00 - 12:00">
+                            11:00 - 12:00
+                        </label>
+                    </div>
+                </div>
+
+                <div class="grupo-filtro">
+                    <div class="grupo-titulo">
+                        <span>Tarde</span>
+                        <small>∨</small>
+                    </div>
+                    <div class="checkbox-lista">
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="horario" value="13:00 - 14:00">
+                            13:00 - 14:00
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="horario" value="14:00 - 15:00">
+                            14:00 - 15:00
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="horario" value="15:00 - 16:00">
+                            15:00 - 16:00
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="horario" value="16:00 - 17:00">
+                            16:00 - 17:00
+                        </label>
+                    </div>
+                </div>
+
+                <div class="grupo-filtro">
+                    <div class="grupo-titulo">
+                        <span>Noite</span>
+                        <small>∨</small>
+                    </div>
+                    <div class="checkbox-lista">
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="horario" value="18:00 - 19:00">
+                            18:00 - 19:00
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="horario" value="19:00 - 20:00">
+                            19:00 - 20:00
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="horario" value="20:00 - 21:00">
+                            20:00 - 21:00
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="horario" value="21:00 - 22:00">
+                            21:00 - 22:00
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conteúdo do Filtro: Aba Data (Slide 4) -->
+            <div class="tab-conteudo" id="tab-data">
+                <div class="grupo-filtro">
+                    <div class="grupo-titulo">
+                        <span>Mês</span>
+                        <small>∨</small>
+                    </div>
+                    <div class="checkbox-lista" id="lista-meses">
+                        <!-- Gerado dinamicamente via JS com limitação dos próximos 3 meses -->
+                    </div>
+                </div>
+
+                <div class="grupo-filtro">
+                    <div class="grupo-titulo">
+                        <span>Dia da Semana</span>
+                        <small>∨</small>
+                    </div>
+                    <div class="checkbox-lista">
+                        <label class="checkbox-item"><input type="checkbox" name="dia" value="Segunda"> Segunda</label>
+                        <label class="checkbox-item"><input type="checkbox" name="dia" value="Terça"> Terça</label>
+                        <label class="checkbox-item"><input type="checkbox" name="dia" value="Quarta"> Quarta</label>
+                        <label class="checkbox-item"><input type="checkbox" name="dia" value="Quinta"> Quinta</label>
+                        <label class="checkbox-item"><input type="checkbox" name="dia" value="Sexta"> Sexta</label>
+                        <label class="checkbox-item"><input type="checkbox" name="dia" value="Sábado"> Sábado</label>
+                        <label class="checkbox-item"><input type="checkbox" name="dia" value="Domingo"> Domingo</label>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn-limpar-filtros">Limpar Filtros</button>
+        </aside>
+
+        <!-- Área Principal de Exibição das Quadras (Deck) -->
+        <section class="conteudo-principal">
+
+            <div>
+                <h1 class="secao-titulo">Quadras Disponíveis em São Carlos</h1>
+                <p class="secao-subtitulo">Selecione uma quadra para ver detalhes, fotos e realizar a reserva</p>
+            </div>
+
+            <!-- Grid/Deck de Cards das Quadras -->
+            <div class="deck">
+
+                <!-- Card 1 -->
+                <div class="card">
+                    <div class="card-imagem-wrapper">
+                        <img class="card-imagem" src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=600&auto=format&fit=crop" alt="Quadra 01"/>
+                        <span class="capsula">Mult Sport</span>
+                    </div>
+                    <div class="card-corpo">
+                        <div class="card-header-info">
+                            <h2 class="card-titulo">Quadra 01</h2>
+                            <div class="card-estrelas">★★★★★</div>
+                        </div>
+                        <p class="card-preco">R$ 150,00/h</p>
+                        <p class="card-descricao">Campo de futebol society sintético de alta durabilidade com vestiário e área VIP.</p>
+                        <button class="card-botao" onclick="abrirModalQuadra(1)">Ver Detalhes</button>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <div class="card-imagem-wrapper">
+                        <img class="card-imagem" src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=600&auto=format&fit=crop" alt="Quadra 02"/>
+                        <span class="capsula">Futsal Coberto</span>
+                    </div>
+                    <div class="card-corpo">
+                        <div class="card-header-info">
+                            <h2 class="card-titulo">Quadra 02</h2>
+                            <div class="card-estrelas">★★★★★</div>
+                        </div>
+                        <p class="card-preco">R$ 140,00/h</p>
+                        <p class="card-descricao">Quadra coberta com piso de madeira flutuante, ideal para Futsal e Handebol.</p>
+                        <button class="card-botao" onclick="abrirModalQuadra(2)">Ver Detalhes</button>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card">
+                    <div class="card-imagem-wrapper">
+                        <img class="card-imagem" src="https://images.unsplash.com/photo-1529900748604-07564a03e7a6?q=80&w=600&auto=format&fit=crop" alt="Quadra 03"/>
+                        <span class="capsula">Beach Tennis</span>
+                    </div>
+                    <div class="card-corpo">
+                        <div class="card-header-info">
+                            <h2 class="card-titulo">Quadra 03</h2>
+                            <div class="card-estrelas">★★★★★</div>
+                        </div>
+                        <p class="card-preco">R$ 120,00/h</p>
+                        <p class="card-descricao">Quadra de areia branca tratada para Beach Tennis e Futvôlei com quiosque social.</p>
+                        <button class="card-botao" onclick="abrirModalQuadra(3)">Ver Detalhes</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Seção de Feedbacks e Comentários dos Usuários -->
+            <section class="secao-feedbacks">
+                <h2 class="secao-titulo" style="font-size: 20px; margin-bottom: 15px;">Avaliações & Feedbacks dos Atletas</h2>
+
+                <!-- Caixinha para postar comentário (Restrito a Usuários Logados) -->
+                <div class="feedback-form-container">
+                    <div class="feedback-status-login">
+                        <span id="status-login-text">Carregando status...</span>
+                        <button class="toggle-login-simulador" id="btn-toggle-login">Simular Login</button>
+                    </div>
+                    <textarea class="feedback-textarea" id="input-comentario" placeholder="Escreva sua experiência sobre a quadra..."></textarea>
+                    <button class="btn-enviar-comentario" id="btn-enviar-comentario">Publicar Comentário</button>
+                </div>
+
+                <!-- Feedbacks públicos listados -->
+                <div class="lista-feedbacks" id="lista-feedbacks">
+                    <div class="feedback-card">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=150&auto=format&fit=crop" alt="Ana Silva" class="feedback-avatar"/>
+                        <div class="feedback-conteudo">
+                            <span class="feedback-usuario">Ana Silva</span>
+                            <p class="feedback-texto">A Quadra 01 é espetacular! O gramado sintético é novinho e a área para churrasco com mesa de sinuca garantiu a resenha perfeita após o jogo.</p>
+                        </div>
+                    </div>
+
+                    <div class="feedback-card">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop" alt="Lucas Mendes" class="feedback-avatar"/>
+                        <div class="feedback-conteudo">
+                            <span class="feedback-usuario">Lucas Mendes</span>
+                            <p class="feedback-texto">Excelente estrutura! Agendei pelo site de forma muito simples e os vestiários estavam extremamente limpos.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+
+    </main>
+
+    <!-- 3. Modal Estilo Shein (Visualização Detalhada da Quadra - Slide 5 do Protótipo) -->
+    <div class="modal-overlay" id="modal-shein-overlay">
+        <div class="modal-shein">
+            <button class="modal-fechar" id="modal-fechar-btn">&times;</button>
+
+            <!-- Carrossel de Fotos Shein -->
+            <div class="galeria-shein">
+                <img id="shein-img" class="galeria-imagem" src="" alt="Foto da Quadra"/>
+                <button class="galeria-seta prev" id="galeria-prev">&lt;</button>
+                <button class="galeria-seta next" id="galeria-next">&gt;</button>
+            </div>
+
+            <!-- Informações e Detalhes da Quadra -->
+            <div class="info-shein">
+                <h2 class="shein-titulo" id="shein-titulo">QUADRA 01</h2>
+
+                <div class="shein-meta">
+                    <span class="shein-avaliacoes" id="shein-rating">★ 5,0 · 3 avaliações</span>
+                    <span class="shein-preco" id="shein-preco">Valor R$ 150,00</span>
+                </div>
+
+                <p class="shein-endereco">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                    <span id="shein-endereco">São Carlos - SP</span>
+                </p>
+
+                <!-- Descrição do Ambiente conforme contextopagquadra.md -->
+                <div class="shein-descricao-bloco">
+                    <h3 class="shein-desc-titulo">Descrição do ambiente:</h3>
+                    <ul class="shein-desc-lista">
+                        <li><strong>Capacidade:</strong> <span id="shein-cap">5 pessoas (4 linha)</span></li>
+                        <li><strong>Quadra coberta:</strong> <span id="shein-coberta">Não possui</span></li>
+                        <li><strong>Área para churrasco:</strong> <span id="shein-churras">Agendamento prévio / 2 Banheiros / Mesa de Sinuca</span></li>
+                        <li><strong>Câmera View:</strong> <span id="shein-camera">Disponível</span></li>
+                        <li><strong>Vestiários:</strong> <span id="shein-vestiario">Sim (Masculino/Feminino)</span></li>
+                    </ul>
+                </div>
+
+                <!-- Botões de Ação de Agendamento Shein (Slide 5) -->
+                <div class="shein-agendamento-bar">
+                    <button class="btn-agendar-main" onclick="agendarQuadra()">Agende seu horário</button>
+                    <button class="btn-horario-slot" onclick="agendarQuadra()">
+                        <span>19:00h - 20:00h</span>
+                        <span>&gt;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script JS -->
+    <script src="../js/quadras.js" defer></script>
+</body>
+</html>

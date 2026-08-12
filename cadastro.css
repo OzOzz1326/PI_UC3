@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    /* Imagem de estádio como fundo, parecida com a da referência */
+    /* Imagem de estádio como fundo, igual a do login */
     background-image: url('https://images.unsplash.com/photo-1518605368461-1e125222058c?q=80&w=2070&auto=format&fit=crop');
     background-size: cover;
     background-position: center;
@@ -16,7 +16,7 @@ body {
 
 /* NAVBAR (Cabeçalho) */
 .navbar {
-    background-color: #0d8a43; /* Cor verde similar à referência */
+    background-color: #0d8a43;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,7 +55,7 @@ body {
     padding: 8px 15px;
     border-radius: 20px;
     border: none;
-    background-color: #799e87; /* Cor da barra de pesquisa */
+    background-color: #799e87;
     color: black;
     width: 150px;
 }
@@ -70,7 +70,7 @@ body {
     cursor: pointer;
 }
 
-/* Icone de perfil na Navbar (Feito com CSS para não precisar de imagem) */
+/* Icone de perfil na Navbar (CSS apenas) */
 .icone-perfil-nav {
     width: 45px;
     height: 45px;
@@ -102,18 +102,17 @@ body {
     margin-top: 3px;
 }
 
-
-/* CONTEÚDO PRINCIPAL (Card de Login) */
-.container-login {
+/* CONTEÚDO PRINCIPAL (Card de Cadastro) */
+.container-cadastro {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.card-login {
-    background-color: #0b7a37; /* Verde escuro do card */
-    width: 400px;
+.card-cadastro {
+    background-color: #0b7a37; /* Verde escuro base da imagem */
+    width: 550px;
     padding: 40px;
     border-radius: 20px;
     box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.4);
@@ -123,95 +122,59 @@ body {
 .topo-card {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
     margin-bottom: 30px;
 }
 
-/* Icone de perfil dentro do card (Feito com CSS) */
-.icone-login {
-    width: 90px;
-    height: 90px;
-    background-color: #05401c; /* Verde mais escuro do fundo do icone */
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.head-icon {
-    width: 30px;
-    height: 30px;
-    background-color: white;
-    border-radius: 50%;
-    margin-top: 10px;
-}
-
-.body-icon {
+.icone-camera {
     width: 50px;
-    height: 30px;
-    background-color: white;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    margin-top: 5px;
+    height: 50px;
+    filter: invert(100%); /* Deixa o icone branco */
 }
 
-.titulo-login {
-    font-size: 40px;
+.titulo-cadastro {
+    font-size: 36px;
     font-weight: normal;
     margin: 0;
-    color: black;
+    color: white;
 }
 
-.formulario {
+.formulario-cadastro {
     display: flex;
     flex-direction: column;
+    gap: 15px;
 }
 
-.formulario label {
-    margin-bottom: 5px;
+.campo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.campo label {
     font-size: 18px;
     color: white;
+    text-align: right;
+    flex: 1;
 }
 
-.input-login {
-    padding: 12px;
+.input-cadastro {
+    padding: 8px 12px;
     border: none;
-    margin-bottom: 2px;
     font-size: 16px;
     outline: none;
+    flex: 2; /* Mantém o input maior que a label */
+    background-color: white;
 }
 
-.esqueci-senha {
-    color: white;
-    font-size: 12px;
-    text-decoration: none;
-    text-align: right;
-    margin-bottom: 40px;
-    margin-top: 5px;
-}
-
-.cadastro {
-    font-size: 15px;
-    text-align: center;
-    margin-top: 20px;
-    color: black;
-}
-
-.cadastro a {
-    color: white;
-    text-decoration: none;
-    font-weight: normal;
-}
-
-.botao-login {
+.botao-container {
     display: flex;
     justify-content: center;
     margin-top: 30px;
 }
 
-.btn-entrar {
+.btn-salvar {
     background-color: #5ab13f; /* Verde mais claro do botao */
     color: black;
     border: none;
@@ -221,6 +184,6 @@ body {
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
-.btn-entrar:hover {
+.btn-salvar:hover {
     background-color: #6edb4c;
 }

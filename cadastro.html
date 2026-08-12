@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - SportingCity</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+
+    <!-- Cabecalho / Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/1165/1165181.png" class="logo-img" alt="Logo SportingCity">
+        </div>
+        
+        <nav class="menu">
+            <a href="#">Início</a>
+            <a href="#">Quadras</a>
+            <a href="#">Filiais</a>
+            <a href="#">Torneios</a>
+        </nav>
+
+        <div class="acoes">
+            <input type="text" class="pesquisa" placeholder="Pesquise...">
+            <img src="https://cdn-icons-png.flaticon.com/512/54/54481.png" class="lupa-icon" alt="Buscar">
+            
+            <div class="icone-perfil-nav">
+                <div class="head-icon-nav"></div>
+                <div class="body-icon-nav"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteudo Principal -->
+    <main class="container-cadastro">
+        <div class="card-cadastro">
+            <div class="topo-card">
+                <!-- Ícone de câmera -->
+                <img src="https://cdn-icons-png.flaticon.com/512/3233/3233076.png" class="icone-camera" alt="Câmera">
+                <h1 class="titulo-cadastro">Cadastre-se</h1>
+            </div>
+
+            <form class="formulario-cadastro">
+                <div class="campo">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" class="input-cadastro" placeholder="Nome Completo" required>
+                </div>
+                
+                <div class="campo">
+                    <label for="data-nascimento">Data de Nascimento:</label>
+                    <input type="text" id="data-nascimento" class="input-cadastro" placeholder="DD/MM/AAAA" required>
+                </div>
+
+                <div class="campo">
+                    <label for="contato">Telefone/Email:</label>
+                    <input type="text" id="contato" class="input-cadastro" placeholder="Telefone ou Email" required>
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Crie uma senha:</label>
+                    <input type="password" id="senha" class="input-cadastro" placeholder="Crie uma senha" required>
+                </div>
+                
+                <div class="campo">
+                    <label for="confirme-senha">Confirme sua senha:</label>
+                    <input type="password" id="confirme-senha" class="input-cadastro" placeholder="Confirme sua senha" required>
+                </div>
+
+                <div class="botao-container">
+                    <button type="submit" class="btn-salvar">Salvar Login</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>
